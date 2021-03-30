@@ -1984,8 +1984,13 @@ curl -H "Content-Type:application/json" http://localhost:8080/acd/saringan/peopl
 ====================
 April 2021 - mapping
 ====================
-curl -H "Content-Type:application/json" http://localhost:8080/point/add -d "{ \"point\" : \"POINT(-71.064544 42.28787)\" }"
+curl -H "Content-Type:application/json" http://localhost:8080/geom/add -d "{ \"pointWKT\" : \"POINT(-71.064544 42.28787)\" }"
 
+curl -H "Content-Type:application/json" http://localhost:8080/geoms/get
+
+curl -H "Content-Type:application/json" http://localhost:8080/geom/update -d "{ \"id\" : 1, \"pointWKT\" : \"POINT(-71 42)\" }"
+
+curl -H "Content-Type:application/json" http://localhost:8080/geom/del -d "{ \"id\" : 1 }"
 
 
 

@@ -14,8 +14,8 @@
     $ sudo -u postgres psql
     
     postgres=# create extension postgis;
-    postgres=# alter role patrick set search_path = "$user", public, postgis;
-    postgres=# alter database kkm set search_path = "$user", public, postgis;
+    [NOT REQUIRED] postgres=# alter role patrick set search_path = "$user", public, postgis;
+    [NOT REQUIRED] postgres=# alter database kkm set search_path = "$user", public, postgis;
 
 5.  Then superuser has to enable PostGIS extension in each database we 
     want to use it in, otherwise PostGIS types and functions won't be 
