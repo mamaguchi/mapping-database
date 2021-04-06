@@ -20,6 +20,20 @@ create table wbk.address
     dt date,
     cluster text    
   );
+  
+drop table if exists wbk.linelisting cascade;
+create table wbk.linelisting
+  (
+    id serial not null,
+    name text,
+    ident text,
+    tel text,
+    address text,
+    lon numeric,
+    lat numeric,
+    formated_address text,
+    geocode_status text
+  );
           
 
 commit;
