@@ -25,10 +25,13 @@ drop table if exists wbk.linelisting cascade;
 create table wbk.linelisting
   (
     id serial not null,
+    bil integer,
+    notifydt date,
     name text,
     ident text,
     tel text,
     address text,
+    state text,
     lon numeric,
     lat numeric,
     formated_address text,
