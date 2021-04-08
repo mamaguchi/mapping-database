@@ -34,7 +34,7 @@ create table wbk.linelisting
     state text,
     lon numeric,
     lat numeric,
-    formated_address text,
+    formatted_address text,
     geocode_status text
   );
           
